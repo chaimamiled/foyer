@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.projectspring.Repositories.BlocRepository;
+import tn.esprit.projectspring.Repositories.chambreRepository;
 import tn.esprit.projectspring.entity.Bloc;
+import tn.esprit.projectspring.entity.Chambre;
 
 import java.util.List;
 @Transactional
@@ -14,7 +16,7 @@ import java.util.List;
 public class BlocService implements IBloc {
     @Autowired
     BlocRepository blocRepository;
-
+    chambreRepository chambreRepository;
     @Override
     public Bloc addBloc(Bloc bloc) {
         return blocRepository.save(bloc);
@@ -84,4 +86,11 @@ blocRepository.deleteById(id);
     public void deleteByNomJPQL(String nom) {
         blocRepository.deleteByNomJPQL(nom);
     }
+
+
+
+    //affectation bloc : parent
+    //ajouter bloc avec chambre
+
+
 }

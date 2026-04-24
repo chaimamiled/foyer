@@ -2,6 +2,7 @@ package tn.esprit.projectspring.Controlleurs;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.projectspring.Services.BlocService;
 import tn.esprit.projectspring.Services.IBloc;
 import tn.esprit.projectspring.entity.Bloc;
 import java.util.List;
@@ -79,4 +80,7 @@ public class BlocRestController {
     public void deleteByNom(@PathVariable String nom) {
         ibloc.deleteByNomJPQL(nom);
     }
+
+
+
 }

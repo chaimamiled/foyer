@@ -22,5 +22,8 @@ public interface IBloc {
     List<Bloc> findByNomAndCapJPQL(String nom, Long cap);
     void updateCapacite(Long id, Long cap);
     void deleteByNomJPQL(String nom);
+
+    //affectation
+    //Bloc affecterChambresABloc(List<Long> numChambre, long idBloc);
 }
 

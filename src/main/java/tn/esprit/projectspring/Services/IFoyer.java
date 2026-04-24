@@ -9,4 +9,6 @@ public interface IFoyer {
     Foyer updateFoyer(Foyer foyer);
     void deleteFoyer(Long id);
     List<Foyer> findFoyer();
+
+    Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite);
 }

@@ -31,4 +31,15 @@ public class UniversiteRestController {
     public List<Universite> getAll() {
         return iUniversite.findUniversite();
     }
+
+//affectation
+@PutMapping("/affecter/{idFoyer}/{nom}")
+public Universite affecter(@PathVariable long idFoyer, @PathVariable String nom) {
+    return iUniversite.affecterFoyerAUniversite(idFoyer, nom);
+}
+
+    @PutMapping("/desaffecter/{idUniversite}")
+    public Universite desaffecter(@PathVariable long idUniversite) {
+        return iUniversite.desaffecterFoyerAUniversite(idUniversite);
+    }
 }
